@@ -1,111 +1,72 @@
 <!DOCTYPE html>
-
-<html>
-
-  <head>
-  <img src ="download.png" alt=Banner width="1200" height="300">
-     <h1><b>ENG0018 Computer Laboratory 2025/26</b><h1>
-     <h2>Student URN:6953922</h2>
-  <hr>
-  <h2 style=”font-family:calibri:”><b>Conference paper: How Computational Fluid Dynamics (CFD) Improves Ship Design </b></h2>
-  <hr>
-
-   <!style for table>
-       <style>
-             table {
-               font-family: arial, sans-serif;
-               border-collapse: sollapse:
-               width: 30%
-
-               }
-
-               td, th {
-                 border: 1px solid ~dddddd:
-                 test-align: left:
-                 padding:8px
-             }
-
-             tr:nth-child(even) {
-               background-color:  ~dddddd:
-               }
-
-
-
-
-          </style>
-
-       <style>
-   p.exl {
-     margin-left: 250px;
-   }
-   </style>
-     </head>
-       
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css>
-       <style>
-       .mySlides {display:none:}
-       </styles>
-
-         <body style="background-color:#FFFFFF;margin-left:50px;">
-
-    
-       <h3 id="Abstract">Abstract</h3>
-       
-       <p class"ex1">
-       <pre>
-           When engineers design a ship they need to make sure it moves smoothly thorugh water, without wasting feul or becoming unstable.
-         But testing ship designs physically (in water tanks) in expensice and slow. 
-         So instead, thye use CFD, which is a kind of computer simulation that shows how water and sir move around a ship's hull or propeller.
-         Like a digital ocean: engineers use maths and physics to model how water flows, ow waves hit the ship, and how design changes affect 
-         speed and resistance. This lets them tet hundreds of designs on a computer before building anything in real life. 
-         
-        </pre>
-        </p>
-
-         <h3 id="Intoduction">Introduction</h3>
-       <p class"ex1">
-       <pre>
-         Around 60-70% of a ship's feul is used just to overcome water resistance (drag). 
-         Even a 1% reduction in drag can save thousands of tonnes of feul every year.
-         CFD helps design more efficient ships, hence, less feul feul, less pollution, and lower costs.
-
-         It is also used to:
-         Predict wave resistance and propeller performance, 
-         Design eco-friednly hull shapes,
-         Test stability and safety in storms or rough seas. 
-         CFD is a simulation based approach to studying how water flows around a ship's hull. 
-
-         
-
-
-       <!DOCTYPE html>
 <html>
 <head>
-<title>MathML Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Conference Paper: CFD in Ship Design</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Style for table -->
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 30%;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    p.ex1 {
+      margin-left: 250px;
+    }
+  </style>
 </head>
-<body>
-<h1>How CFD works?</h1>
-<p>Engineers divide the ship and surrounding water into tiny cubes called cells. Then they calculate how the water moves through each cube. 
-  
-  Examples of CFD applications:
-  - Optimising hull shapes to reduce drag.
-  - Desigining propellers for smoother flow.
-  - Simulating ship performance under different sea conditons.
-  - Simulating ship performance under different sea conditions. 
-  Comparison: traditional tank testing vs CFD (cost, time, precision).
-  .</p>
-<!--MathML representations of the quadratic formula-->
-<math xmlns="http://www.w3.org/1998/Math/MathML">
-<mrow>
-<msup><mi>x</mi><mn>2</mn></msup>
-<mo>+</mo><mi>4</mi><mo>&InvisibleTimes;</mo><mi>x</mi>
-<mo>+</mo><mi>4</mi>
-<mo>=</mo>
-<mi>0</mi>
-</body>
-</html>
-       
+
+<body style="background-color:#FFFFFF;margin-left:50px;">
+
+  <img src="download.png" alt="Banner" width="1200" height="300">
+  <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
+  <h2>Student URN: 6953922</h2>
+  <hr>
+  <h2 style="font-family:calibri;"><b>Conference paper: How Computational Fluid Dynamics (CFD) Improves Ship Design</b></h2>
+  <hr>
+
+  <h3 id="Abstract">Abstract</h3>
+  <p id= "Abstract_InText" class="ex1">
+    When engineers design a ship, they need to make sure it moves smoothly through water without wasting fuel or becoming unstable.  
+    But testing ship designs physically (in water tanks) is expensive and slow. So instead, they use CFD—a computer simulation that shows how water and air move around a ship's hull or propeller.  
+    Engineers can test hundreds of designs digitally before building anything in real life.
+  </p>
+
+  <h3 id="Introduction">Introduction</h3>
+  <p id="Introduction_InText" class="ex1">
+    Around 60–70% of a ship's fuel is used just to overcome water resistance (drag). Even a 1% reduction can save thousands of tonnes of fuel yearly.  
+    CFD helps design more efficient ships—less fuel, less pollution, and lower costs.
+  </p>
+
+  <p id="totalWordCount"></p>
+  <hr>
+
+  <script>
+    function displayWordCount(sectionId) {
+      const text = document.getElementById(sectionId)?.textContent || "";
+      const wordArray = text.trim().split(/\s+/).filter(w => w.length > 0);
+      return wordArray.length;
+    }
+
+    function displayTotalWordCount() {
+      const IntroductionCount = displayWordCount("Introduction_InText");
+      const AbstractCount = displayWordCount("Abstract_InText");
+      const totalWordCount = IntroductionCount+AbstractCount;
+      document.getElementById("totalWordCount").innerText =
+        `Total word count: ${totalWordCount}`;
+    }
+
+    window.onload = displayTotalWordCount;
 
   <!table of contents>
   <table>
