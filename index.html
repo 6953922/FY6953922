@@ -1,253 +1,244 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Conference Paper: CFD in Ship Design</title>
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conference Paper: How CFD Improves Ship Design</title>
 
-  <!-- Style for table -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+
   <style>
-    table {
-      font-family: arial, sans-serif;
-      border-collapse: collapse;
-      width: 30%;
+    body {
+      background-color: #ffffff;
+      margin-left: 50px;
+      font-family: Arial, sans-serif;
     }
+
+    img.banner {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+    }
+
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
     td, th {
       border: 1px solid #dddddd;
       text-align: left;
       padding: 8px;
     }
+
     tr:nth-child(even) {
-      background-color: #dddddd;
+      background-color: #f2f2f2;
     }
+
     p.ex1 {
       margin-left: 250px;
+      white-space: pre-wrap;
+    }
+
+    h3 {
+      margin-top: 30px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+    hr {
+      margin-top: 30px;
+      margin-bottom: 30px;
     }
   </style>
 </head>
 
-<body style="background-color:#FFFFFF;margin-left:50px;">
+<body>
 
-  <img src="download.png" alt="Banner" width="1200" height="300">
+  <!-- Header -->
+  <img src="download.png" alt="Banner" class="banner" />
   <h1><b>ENG0018 Computer Laboratory 2025/26</b></h1>
   <h2>Student URN: 6953922</h2>
   <hr>
-  <h2 style="font-family:calibri;"><b>Conference paper: How Computational Fluid Dynamics (CFD) Improves Ship Design</b></h2>
+  <h2 style="font-family:calibri;">
+    <b>Conference Paper: How Computational Fluid Dynamics (CFD) Improves Ship Design</b>
+  </h2>
   <hr>
 
-  <h3 id="Abstract">Abstract</h3>
-  <p id= "Abstract_InText" class="ex1">
-    When engineers design a ship, they need to make sure it moves smoothly through water without wasting fuel or becoming unstable.  
-    But testing ship designs physically (in water tanks) is expensive and slow. So instead, they use CFD—a computer simulation that shows how water and air move around a ship's hull or propeller.  
-    Engineers can test hundreds of designs digitally before building anything in real life.
-  </p>
+  <!-- Table of Contents -->
+  <table>
+    <tr><th><h3>Table of Contents</h3></th></tr>
+    <tr><td><a href="#Abstract">Abstract</a></td></tr>
+    <tr><td><a href="#Introduction">Introduction</a></td></tr>
+    <tr><td><a href="#References">References</a></td></tr>
+    <tr><td><a href="#InteractiveSection">Interactive Demos</a></td></tr>
+  </table>
 
-  <h3 id="Introduction">Introduction</h3>
-  <p id="Introduction_InText" class="ex1">
-    Around 60–70% of a ship's fuel is used just to overcome water resistance (drag). Even a 1% reduction can save thousands of tonnes of fuel yearly.  
-    CFD helps design more efficient ships—less fuel, less pollution, and lower costs.
-  </p>
+  <!-- Abstract -->
+  <div class="section">
+    <h3 id="Abstract">Abstract</h3>
+    <p id="Abstract_InText" class="ex1">
+      When engineers design a ship, they need to make sure it moves smoothly through water without wasting fuel or becoming unstable. 
+      Testing ship designs physically (in water tanks) is expensive and slow. 
+      Instead, they use CFD—a computer simulation that shows how water and air move around a ship's hull or propeller. 
+      Engineers can test hundreds of designs digitally before building anything in real life.
+    </p>
+  </div>
 
+  <!-- Introduction -->
+  <div class="section">
+    <h3 id="Introduction">Introduction</h3>
+    <p id="Introduction_InText" class="ex1">
+      Around 60–70% of a ship's fuel is used just to overcome water resistance (drag). 
+      Even a 1% reduction can save thousands of tonnes of fuel yearly. 
+      CFD helps design more efficient ships—less fuel, less pollution, and lower costs. 
+      It allows simulation of wave interaction, hull optimization, and propeller performance in virtual environments.
+    </p>
+  </div>
+
+  <!-- Example Data Table -->
+  <h4>Table 1: Example Data on Cost of Ship Repairs</h4>
+  <table>
+    <tr>
+      <th>Repair Type</th>
+      <th>Approximate Cost (£ Million)</th>
+      <th>Expected Lifespan (Years)</th>
+    </tr>
+    <tr><td>Minor Hull Maintenance</td><td>0.7</td><td>5</td></tr>
+    <tr><td>Propeller Replacement</td><td>1.5</td><td>8</td></tr>
+    <tr><td>Hull Reshape Retrofit</td><td>3.2</td><td>15</td></tr>
+  </table>
+
+  <hr>
+
+  <!-- References -->
+  <h3 id="References">References</h3>
+  <pre>
+Toshihiko et al. (2023). "A study on CFD-based optimization for ship design."
+Available at: https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034
+
+Angluin, D. (1988). Queries and concept learning. Machine Learning 2(4), 319–342.
+Brinker, K. (2003). Incorporating Diversity in Active Learning with Support Vector Machines.
+Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003).
+  </pre>
+
+  <hr>
+
+  <!-- Interactive Section -->
+  <div class="section" id="InteractiveSection">
+    <h3>Interactive Demos</h3>
+
+    <!-- Button Color Changer -->
+    <h4>1. Change Button Colour</h4>
+    <button id="colorButton">Click me to change colour</button>
+
+    <script>
+      const colorButton = document.getElementById("colorButton");
+      colorButton.addEventListener("click", () => {
+        const randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+        colorButton.style.backgroundColor = randomColor;
+      });
+    </script>
+
+    <!-- Alert Input -->
+    <h4>2. Alert Input Text</h4>
+    <input type="text" id="textInput" placeholder="Enter text" />
+    <button id="alertButton">Show Alert</button>
+
+    <script>
+      const alertButton = document.getElementById("alertButton");
+      const textInput = document.getElementById("textInput");
+      alertButton.addEventListener("click", () => {
+        alert("You entered: " + textInput.value);
+      });
+    </script>
+
+    <!-- Random Number Generator -->
+    <h4>3. Random Number Generator</h4>
+    <button id="generateButton">Generate Random Number</button>
+    <p id="randomNumber"></p>
+
+    <script>
+      const generateButton = document.getElementById("generateButton");
+      const randomOutput = document.getElementById("randomNumber");
+      generateButton.addEventListener("click", () => {
+        const randomNum = Math.floor(Math.random() * 10) + 1;
+        randomOutput.textContent = "Random Number: " + randomNum;
+      });
+    </script>
+
+    <!-- GitHub Last Updated Checker -->
+    <h4>4. GitHub Repository Last Updated Time</h4>
+    <div id="last-updated">Loading last update time...</div>
+    <button onclick="getLastUpdatedTime()">Check Last Modified Time</button>
+
+    <script>
+      async function getLastUpdatedTime() {
+        const username = "6953922";
+        const repo = "FY6953922";
+        const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+
+        try {
+          const response = await fetch(url, {
+            method: "GET",
+            headers: { Accept: "application/vnd.github.v3+json" }
+          });
+
+          if (!response.ok) throw new Error(`Error fetching data: ${response.status}`);
+
+          const commits = await response.json();
+          if (commits && commits.length > 0) {
+            const lastCommitDate = new Date(commits[0].commit.committer.date);
+            document.getElementById("last-updated").innerText =
+              "Last Modified Time: " + lastCommitDate.toLocaleString();
+          } else {
+            document.getElementById("last-updated").innerText =
+              "No commits found in the repository.";
+          }
+        } catch (error) {
+          document.getElementById("last-updated").innerText =
+            "Error fetching update time: " + error.message;
+        }
+      }
+
+      window.onload = getLastUpdatedTime;
+    </script>
+  </div>
+
+  <hr>
+
+  <!-- Total Word Count -->
   <p id="totalWordCount"></p>
-  <hr>
 
   <script>
     function displayWordCount(sectionId) {
       const text = document.getElementById(sectionId)?.textContent || "";
-      const wordArray = text.trim().split(/\s+/).filter(w => w.length > 0);
-      return wordArray.length;
+      const words = text.trim().split(/\s+/).filter(w => w.length > 0);
+      return words.length;
     }
 
     function displayTotalWordCount() {
-      const IntroductionCount = displayWordCount("Introduction_InText");
-      const AbstractCount = displayWordCount("Abstract_InText");
-      const totalWordCount = IntroductionCount+AbstractCount;
+      const abstractCount = displayWordCount("Abstract_InText");
+      const introCount = displayWordCount("Introduction_InText");
+      const total = abstractCount + introCount;
       document.getElementById("totalWordCount").innerText =
-        `Total word count: ${totalWordCount}`;
+        `Total Word Count (Abstract + Introduction): ${total}`;
     }
 
-    window.onload = displayTotalWordCount;
-
-  <!table of contents>
-  <table>
-
-    <tr> 
-    <th><h3>Table of contents</h3></th>
-    </tr>
-    <tr>
-      <td><a href=#Abstract">Abstract</td>
-    </tr>
-    <tr>
-      <td><a href="#Introduction">Introduction</td>
-    </tr>
-    <tr>
-      <td><a href=#Analysis and discussion">Analsyis and discussion</td>
-    </tr>
-
-    <tr>
-      <td><a href="Refernces<td>
-    </tr>
-  </table>
-
-
-  Table 1: Data on cost and lifespan of bridge repairs
-  <table>
-    <tr>
-      <th>£ Cost of repairs</th>
-    </tr>
-    <tr>
-      <td>0.7 m<td</td>
-    </tr>
-    </tr>
-  </table>
-       </style>
-
-         
-       </style>
-  </head>
-
-  </html>
-
-  ‘<a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al
-(2023).</a>'
-
-  <h3 id="References">References</h3>
-
-<p>
-<pre>
-  Angluin, D (1988), Queries and concept learning. Machine learning 2, (4), 319-342.
-
-  Brinker, K (2--3), Incorporating Diversity in Active Learning with Suppor Vector Machines,
-  Proceedings of the Twentieth International Conferrence on Machine Learning (ICML-2003).
-
-  Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classification of remote-sesning images,
-  IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
-
-  Campbell, C Cristianini, N and Smola, A (2---), Query learning with large margin classifiers.
-  In: Proc. 17th Internat. Conf.on Machine Learning. Morgan Kaufman, Stanford, CA,111-118.
-
-</pre>
-  
- </p>
-
-
-<!DOCTYPE html>
-<html>
-<head>
- <title>Change Button Colour</title> 
-</head>
- <body>
-     <button id="colorButton">Click me to change colour</button>
-  <script>
-    //Get a reference to the button element
-    var button = documnet.getElementByld("colorButton");
-
-    //Function to change the button color
-    function changrColor(){
-      //Generate a random color (hexadecimal)
-      var randomColor="#"+Math.floor(Maths.random()*16777215.toString(16);
-
-      //Set the button's background color to the random color
-      button.style.backgroundColor=random color
-      button.style.backgrounfColor=randomColor;
-    }
-
-    //Add a click event listener to the button
-    button.style.backgorundColor=randomColor;
+    // Run after everything loads
+    window.addEventListener("load", displayTotalWordCount);
   </script>
- </body>
-</html>
-
-  <IDOCTYPE html>
-
-<htm_l>
-<head>
-<title>Alert Input Text</title>
-</head> 
-<body>
- <input type="text" id="textInput" placeholder="Enter text">
- <button id="alertButton">Show Alert</button>
-
-<script>
-//Get references to the input field and button
-var input = document.getElementById("textInput");
-var button - document.getElementById("alertButton");
-
-// Function to show an alert with the input text
-function showAlent() {
-var inputText = input.value;
-alert("You entered: " + inputText);
-  }
-// Add a click event listener to the button
-button. addEventListener ("click", showAlert);
-</script>
-</body>
-</html>
-
-
-<DOCTYPE html>
-<html>
-<head>
- <title> Random Number Generator </title>
-
-</head>
-<body>
-
-<button id="generateButton">Generate Random Number</button>
-<p id-"randomNumber"></p>
-
-<script>
-
-// Get a reference to the button and paragraph
-  var button - document.getElementById("generateButton");
-  var paragraph - document-getElementById("randomNumber");
-
-// Function to generate and display a random number
-function generateRandomNumber() {
-var randoniumber - Math. floor(Math. random() * 10) + 1; 
-paragraph.textContent = "Random Number:" + randomNumber;
-  }
-// Add a click event 11stener to the button
-button. addEventListener("click", generateRandomNumber);
-
- <div id="last-updated">Loading last update time...</div>
-   <!-- Verify Button -->
-   <button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
-   Verify Last Modified time 
-   </button>
-  
-   <script>
-   async function getLastUpdatedTime() {
-     const username = '6953922';
-     const repo = 'FY6953922';
-
-     const url = 'https://api.github.com/repos/${username}/${repo}/commits';
-
-     try{
-       const response = await fetch(url, {
-         method: 'Get',
-         headers: {
-           'Accept':'application/vnd.github.v3+json',
-         }
-       }];
-       if (response.ok){
-         throw new Error ('Error fetching data: $(response.status} - $(response.statusText}');
-       }
-       const commits = await response.json();
-       if (commits && commits.length>0) {
-         const lastCommitDate = new data(commits[0].commit.committer.date);
-
-         //Displaying the time on load
-         document.getElementById('last-updated').innerText='Last Modified Time: ${lastCommitDate.toLocaleString()}';
-       } else {
-         document.getElementById('last-updated').innerText = 'No commits found in the repository.';
-       }
-     }
-     //Function to verify the last update time by re-fetching it from the API.");
-   }
-  //Initial load to display the time on page load
-  window.onload = getLastUpdatedTime;
 
 </body>
 </html>
+
   
